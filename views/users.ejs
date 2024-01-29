@@ -1,0 +1,15 @@
+<%- include('partials/header', { title: 'Users' }) %>
+<section class="users-section">
+  <h2>Users</h2>
+  <% data.forEach(user => { %>
+  <div class="user-card">
+    <a href="/users/<%= user.id %>">
+      <h3><%= user.name %></h3>
+      <div class="user-details">
+        <p>Email: <%= user.email %></p>
+      </div>
+    </a>
+  </div>
+  <% }); %>
+</section>
+<%- include('partials/footer') %>
